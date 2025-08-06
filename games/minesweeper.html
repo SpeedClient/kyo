@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - Ploutox Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-color: #0a0f1e;
+        color: #00f5c9;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    #board {
+        display: grid;
+        grid-template-columns: repeat(10, 30px);
+        grid-template-rows: repeat(10, 30px);
+        gap: 2px;
+        margin-bottom: 20px;
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #00f5c9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1a1a1a;
+        color: #00f5c9;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cell.revealed {
+        background-color: #2a2a2a;
+        cursor: default;
+    }
+
+    .cell.mine {
+        background-color: #ff4d4d;
+    }
+
+    .cell.flag {
+        background-color: #ffcc00;
+    }
+
+    #controls {
+        display: flex;
+        gap: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #00f5c9;
+        color: #0a0f1e;
+        border: none;
+
+        border-radius: 5::contentReference[oaicite:0] {
+            index=0
+        }
+</style>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" style="text-decoration: none; color: #00f5c9;">← Games</a>
+    </nav>
+
+    <!-- Game Title -->
+    <h1>Minesweeper</h1>
+
+    <!-- Game Board -->
+    <div id="board"></div>
+
+    <!-- Game Controls -->
+    <div id="controls">
+        <button id="startButton">Start Game</button>
+        <button id="restartButton">Restart Game</button>
+    </div>
+
+    <script src="minesweeper.js"></script>
+</body>
+
+</html>

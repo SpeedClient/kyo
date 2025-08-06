@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris – Ploutox Arcade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0a0d1b] text-white flex flex-col items-center justify-center min-h-screen">
+    <header class="px-8 py-6">
+        <a href="games.html" class="text-[#00f5c9]">&larr; Games</a>
+    </header>
+    <main class="flex-grow flex flex-col items-center justify-center">
+        <canvas id="gameCanvas" width="300" height="600" class="bg-black border-2 border-[#00f5c9]"></canvas>
+        <div class="mt-4 space-x-4">
+            <button id="startButton" class="bg-[#00f5c9] text-black px-4 py-2 rounded">Start Game</button>
+            <button id="restartButton" class="bg-[#00f5c9] text-black px-4 py-2 rounded">Restart Game</button>
+        </div>
+        <div id="gameOverScreen" class="mt-4 hidden text-center">
+            <h2 class="text-xl">Game Over</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+        </div>
+    </main>
+    <script src="tetris.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game – Ploutox Arcade</title>
+  <script defer src="memory.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0A0D1B;
+      color: #00F5C9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      /* Aligns content to the top */
+      height: 100vh;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      gap: 12px;
+      margin: 20px auto;
+      min-height: 340px;
+    }
+
+    .card {
+      width: 80px;
+      height: 80px;
+      background: #00F5C9;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #0A0D1B;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card.flipped {
+      background: #222;
+      color: #00F5C9;
+    }
+
+    .card.matched {
+      background: #00F5C9;
+      pointer-events: none;
+      box-shadow: 0 0 8px #00F5C9;
+      color: #0A0D1B;
+    }
+
+    button {
+      background: #00F5C9;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    button:hover {
+      background: #00D8B5;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .game-over {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full flex justify-center py-6">
+    <a href="games.html" class="text-[#00f5c9] font-bold text-xl hover:text-[#00ffd1] transition-colors" style="text-decoration: none;color: #00D8B5;">
+      &larr; Games
+    </a>
+  </header>
+  <div class="container">
+    <h1 class="text-3xl mb-4" style="margin-top: 200px;">Emoji Memory Game</h1>
+    <div>Moves: <span id="moves">0</span></div>
+    <button id="reset-btn"
+      class="bg-[#00f5c9] text-black px-4 py-2 rounded mt-4 hover:bg-[#00ffd1] transition-colors">Reset</button>
+    <div id="board" class="board"></div>
+    <div id="game-over" class="hidden game-over mt-6">
+      <h2 class="text-2xl">Game Over 🎉</h2>
+      <p>Total Moves: <span id="final-moves">0</span></p>
+      <button id="play-again-btn"
+        class="bg-[#00f5c9] text-black px-4 py-2 rounded mt-2 hover:bg-[#00ffd1] transition-colors">Play Again</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights | Ploutox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0a0d1b] text-white font-sans">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-8 py-6 border-b border-[#1d2235]">
+        <a href="/" class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-[#00f5c9]" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+            <span class="text-xl font-bold text-[#00f5c9]">ploutox</span>
+        </a>
+        <nav class="space-x-6">
+            <a href="index.html" class="hover:text-[#00ffd1]">Home</a>
+            <a href="articles.html" class="hover:text-[#00ffd1]">Articles</a>
+            <a href="game-page.html" class="hover:text-[#00ffd1]">Games</a>
+            <a href="about.html" class="hover:text-[#00ffd1]">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Our Insights</h1>
+            <p class="text-gray-400">Dive deep into the world of technology and finance with our comprehensive
+                collection of articles.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-8 flex justify-center">
+            <input id="searchInput" type="text" placeholder="🔍 Search articles..."
+                class="w-full max-w-2xl px-4 py-2 rounded-lg bg-[#1a1f2e] text-white placeholder-gray-400 focus:outline-none focus:ring focus:ring-[#00f5c9]" />
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div id="filters" class="flex flex-wrap justify-center gap-3 mb-10">
+            <button data-category="All" class="category-btn active">All</button>
+            <button data-category="Artificial Intelligence" class="category-btn">Artificial Intelligence</button>
+            <button data-category="Decentralized Finance" class="category-btn">Decentralized Finance</button>
+            <button data-category="Future of Work" class="category-btn">Future of Work</button>
+            <button data-category="Blockchain" class="category-btn">Blockchain</button>
+            <button data-category="Cybersecurity" class="category-btn">Cybersecurity</button>
+        </div>
+
+        <!-- Articles Grid -->
+
+        <div id="articles" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Articles will be dynamically injected here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 border-t border-[#1d2235] text-gray-500 text-sm">
+        &copy; 2025 Ploutox. All rights reserved.
+    </footer>
+
+    <script src="articles.js"></script>
+    <style>
+        .category-btn {
+            background-color: #1a1f2e;
+            color: #fff;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background-color: #00f5c9;
+            color: #000;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch Game – Ploutox Arcade</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0A0D1B;
+            color: #00F5C9;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        canvas {
+            background: #1a1f2e;
+            border: 2px solid #00F5C9;
+            margin-top: 20px;
+        }
+
+        .score {
+            font-size: 16px;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #00F5C9;
+            color: #0A0D1B;
+            border: none;
+            padding: 10px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            margin: 6px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #00D8B5;
+        }
+
+        a.back {
+            text-decoration: none;
+            color: #00F5C9;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        a.back:hover {
+            color: #00FFD1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="games.html" class="back">&larr; Games</a>
+        <h1>Catch the Falling Items</h1>
+        <div class="score">Score: <span id="score">0</span></div>
+        <button id="startBtn">Start</button>
+        <button id="restartBtn">Restart</button>
+    </header>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <script src="catch.js"></script>
+</body>
+
+</html>

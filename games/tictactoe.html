@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe – Ploutox Arcade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0a0d1b] text-white flex flex-col min-h-screen">
+    <header class="px-8 py-6 border-b border-[#1d2235]">
+        <a href="games.html" class="text-[#00f5c9]">&larr; Games</a>
+    </header>
+    <main class="flex-grow flex flex-col items-center justify-center space-y-6">
+        <div id="board" class="grid grid-cols-3 gap-2"></div>
+        <div id="message" class="text-lg"></div>
+        <button id="restart" class="bg-[#00f5c9] px-4 py-2 rounded-md">Restart</button>
+    </main>
+    <script src="tictactoe.js"></script>
+</body>
+
+</html>

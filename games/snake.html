@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Snake Game – Ploutox Arcade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    body {
+        background-color: #0A0D1B;
+        /* Deep Black */
+        font-family: 'Orbitron', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    canvas {
+        border: 2px solid #00F5C9;
+        /* Neon Cyan */
+        box-shadow: 0 0 10px rgba(0, 245, 201, 0.8);
+        background-color: #000;
+    }
+
+    button {
+        background-color: #00F5C9;
+        /* Neon Cyan */
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #00C7A1;
+        /* Darker Neon Cyan */
+    }
+
+    button:disabled {
+        background-color: #555;
+        cursor: not-allowed;
+    }
+
+    #gameOverScreen {
+        color: #00F5C9;
+        /* Neon Cyan */
+        text-align: center;
+        font-size: 18px;
+    }
+</style>
+
+<body class="bg-[#0a0d1b] text-white flex flex-col items-center justify-center min-h-screen">
+    <header class="px-8 py-6 ">
+        <a href="games.html" class="text-[#00f5c9]">&larr; Games</a>
+    </header>
+    <main class="flex-grow flex flex-col items-center justify-center">
+        <canvas id="gameCanvas" width="400" height="400" class="bg-black border-2 border-[#00f5c9]"></canvas>
+        <div class="mt-4 space-x-4">
+            <button id="startButton" class="bg-[#00f5c9] text-black px-4 py-2 rounded">Start Game</button>
+            <button id="restartButton" class="bg-[#00f5c9] text-black px-4 py-2 rounded">Restart Game</button>
+        </div>
+        <div id="gameOverScreen" class="mt-4 hidden text-center">
+            <h2 class="text-xl">Game Over</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+        </div>
+    </main>
+    <script src="snake.js"></script>
+</body>
+
+
+</html>
